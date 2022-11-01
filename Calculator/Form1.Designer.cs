@@ -100,6 +100,7 @@
             this.btnCong.TabIndex = 2;
             this.btnCong.Text = "+";
             this.btnCong.UseVisualStyleBackColor = true;
+            this.btnCong.Click += new System.EventHandler(this.btnCong_Click);
             // 
             // Form1
             // 
