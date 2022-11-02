@@ -19,10 +19,63 @@ namespace Calculator
 
         private void btnCong_Click(object sender, EventArgs e)
         {
-            double a = double.Parse(txtsoA.Text);
-            double b = double.Parse(txtsoB.Text);
-            double c = a + b;
-            txtKQ.Text=c.ToString();
+            int a, b, ketQua;
+            a = int.Parse(txtsoA.Text);
+            b = int.Parse(txtsoB.Text);
+            Calculation c = new Calculation(a, b);
+            ketQua = c.Execute("+");
+            txtKQ.Text = ketQua.ToString();
+
         }
+
+        private void btnTru_Click(object sender, EventArgs e)
+        {
+            int a, b, ketQua;
+            a = int.Parse(txtsoA.Text);
+            b = int.Parse(txtsoB.Text);
+            Calculation c = new Calculation(a, b);
+            ketQua = c.Execute("-");
+            txtKQ.Text = ketQua.ToString();
+        }
+
+        private void btnNhan_Click(object sender, EventArgs e)
+        {
+            int a, b, ketQua;
+            a = int.Parse(txtsoA.Text);
+            b = int.Parse(txtsoB.Text);
+            Calculation c = new Calculation(a, b);
+            ketQua = c.Execute("*");
+            txtKQ.Text = ketQua.ToString();
+        }
+
+        private void btnChia_Click(object sender, EventArgs e)
+        {
+            int a, b, ketQua;
+            a = int.Parse(txtsoA.Text);
+            b = int.Parse(txtsoB.Text);
+            Calculation c = new Calculation(a, b);
+            ketQua = c.Execute("/");
+            txtKQ.Text = ketQua.ToString();
+        }
+
+        private void btnMu_Click(object sender, EventArgs e)
+        {
+            int n;
+            double x,ketQua;
+            x = double.Parse(txtsoA.Text);
+            n = int.Parse(txtsoB.Text);
+            ketQua = Calculation.Power(x,n);
+            txtKQ.Text = ketQua.ToString();
+        }
+
+
+
+        /* private void btnCong_Click(object sender, EventArgs e)
+         {
+             double a = double.Parse(txtsoA.Text);
+             double b = double.Parse(txtsoB.Text);
+             double c = a + b;
+             txtKQ.Text=c.ToString();
+         }*/
     }
 }
